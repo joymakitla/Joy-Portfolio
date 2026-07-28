@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Joy Makitla</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Joy Makitla</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="page">
+    <div class="container">
+      <h1 class="section-title">My <span>Projects</span></h1>
+      <p class="section-sub">A selection of work across web, automation, and cybersecurity labs.</p>
+
+      <div class="projects-grid">
+        <article class="card project-card">
+          <div class="project-icon">🌸</div>
+          <h3>Portfolio Website</h3>
+          <p>Personal multi-page portfolio with a soft IT aesthetic, animations, and GitHub Pages hosting.</p>
+          <div class="tech-row">
+            <span class="tech">HTML</span>
+            <span class="tech">CSS</span>
+            <span class="tech">GitHub Pages</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://github.com/joymakitla/Joy-Portfolio" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-outline" href="index.html">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-icon">💻</div>
+          <h3>HTML &amp; CSS Website</h3>
+          <p>Responsive multi-section website built with clean semantic HTML and modern CSS layouts.</p>
+          <div class="tech-row">
+            <span class="tech">HTML</span>
+            <span class="tech">CSS</span>
+            <span class="tech">Responsive</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://github.com/joymakitla/Web-Development-Project" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-outline" href="#" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-icon">⚙️</div>
+          <h3>PowerShell System Monitoring</h3>
+          <p>Automation scripts for monitoring Windows systems and simplifying admin workflows.</p>
+          <div class="tech-row">
+            <span class="tech">PowerShell</span>
+            <span class="tech">Automation</span>
+            <span class="tech">Windows Server</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://github.com/joymakitla/" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-icon">🧩</div>
+          <h3>C# Console Application</h3>
+          <p>Console app built with C# and .NET in Visual Studio, focused on clean structure and logic.</p>
+          <div class="tech-row">
+            <span class="tech">C#</span>
+            <span class="tech">.NET</span>
+            <span class="tech">Visual Studio</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://github.com/joymakitla/csharp-console-app" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-icon">🛡️</div>
+          <h3>Nmap Network Scanning Lab</h3>
+          <p>Hands-on cybersecurity lab using Kali Linux and Nmap to practice network discovery and scanning.</p>
+          <div class="tech-row">
+            <span class="tech">Kali Linux</span>
+            <span class="tech">Nmap</span>
+            <span class="tech">Cybersecurity</span>
+          </div>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="https://github.com/joymakitla/nmap-network-scanning-lab" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> <span>Joy Makitla</span>. Built with HTML &amp; CSS.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
