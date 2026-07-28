@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Joy Makitla</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Joy Makitla</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="page">
+    <div class="container">
+      <h1 class="section-title">About <span>Me</span></h1>
+      <p class="section-sub">A little more about who I am and what I’m building toward.</p>
+
+      <div class="about-grid">
+        <div class="about-photo-wrap">
+          <img class="about-photo" src="images/profile.jpeg" alt="Joy Makitla" />
+          <div class="about-photo-fallback" aria-label="Profile placeholder">JM</div>
+        </div>
+
+        <div class="about-content">
+          <h2>Hello! I’m Joy Makitla.</h2>
+          <p>
+            I’m currently completing my Diploma in Information Technology at
+            Belgium Campus iTversity. I enjoy solving problems with code, keeping
+            systems healthy, and learning how networks and security fit together.
+          </p>
+          <p>
+            Whether I’m writing applications, scripting with PowerShell, or exploring
+            cybersecurity labs, I aim for work that is clean, practical, and ready for real environments.
+          </p>
+
+          <h3 style="margin-bottom: 0.75rem;">My interests include</h3>
+          <ul class="interest-list">
+            <li>Software Development</li>
+            <li>System Administration</li>
+            <li>PowerShell Automation</li>
+            <li>Cloud Computing</li>
+            <li>Cybersecurity</li>
+            <li>Networking</li>
+          </ul>
+
+          <div class="card edu-card">
+            <h3>Education</h3>
+            <p class="school">Belgium Campus iTversity</p>
+            <p>Diploma in Information Technology</p>
+            <p class="meta">Expected Graduation: 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> <span>Joy Makitla</span>. Built with HTML &amp; CSS.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
